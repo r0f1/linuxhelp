@@ -56,12 +56,21 @@
 |id `<username>`<br>groups `<username>` | | **view groups of user** |
 |w | | **Show who is logged on** |
 
-## SAS specific
-|Command|Example|Comment|
-|---|---|---|
-|qbs `<sasfile>` | qbs test.sas <br> qbs -q s -o disksize=30G test.sas | Submit a SAS file to the server <br> -q s short queue  <br> -q m medium queue  <br> -q l long queue  <br> -o ... other options.  <br> Will print a job number.|
-|qdel `<job number>` <br> qdel -u `<username>` | qdel 4711 <br> qdel -u user | Kill SAS job <br> Kill all jobs of a certain user |
-|qstat| |View your running programs |
+## Creating an SSH key
+
+```
+# Creating
+ssh-keygen -t rsa -b 4096 -N "" -C "" -f keyname
+
+# Setting access rights
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+
+# ~/.ssh/config
+Host github
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_keyname
+``` 
 
 ## Permissions
 
