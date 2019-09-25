@@ -56,22 +56,6 @@
 |id `<username>`<br>groups `<username>` | | **view groups of user** |
 |w | | **Show who is logged on** |
 
-## Creating an SSH key
-
-```
-# Creating
-ssh-keygen -t rsa -b 4096 -N "" -C "" -f keyname
-
-# Setting access rights
-chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
-
-# ~/.ssh/config
-Host github
-HostName github.com
-User git
-IdentityFile ~/.ssh/id_keyname
-``` 
-
 ## Permissions
 
 Type `chmod xxx <filename>` to change permissions where `xxx` is the numerical code from the table below.
