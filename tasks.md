@@ -1,6 +1,6 @@
 ## Creating an SSH key
 
-```
+```bash
 # Creating
 ssh-keygen -t rsa -b 4096 -N "" -C "" -f keyname
 
@@ -16,7 +16,7 @@ IdentityFile ~/.ssh/id_keyname
 
 ## .bashrc
 
-```
+```bash
 # Detailed ls output
 alias ll='ls -halt'
 
