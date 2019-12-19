@@ -46,6 +46,7 @@
 |df `<directory>` | df -h | **disk free** <br> Show remaining disk space <br> -h human readable |
 |ls -1 &#124; wc -l | | Count number of files in current directory. |
 |htop| | View currently running processes. |
+|watch| watch -n60 ls | Repeat a command every n seconds. |
 
 ## Lesser used
 
