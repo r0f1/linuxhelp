@@ -28,34 +28,38 @@
 |cp `<source>` `<target>`| cp text.txt test <br> cp -p text.txt test | **Copy** a file <br> -p preserves mode, ownership, and timestamps<br> Can also rename. |
 |rm `<filename>` <br> rm -rf `<foldername>`|rm text.txt <br> rm -rf test  <br> rm \*.tmp (removes all files with file ending \*.tmp)| **Remove** <br> *warning: cannot be undone!* <br> -f force, no confirmation<br> dialog, no warnings <br> -r recursive, for folders |
 |sudo `<command>`| sudo ls | **super user do** <br> Run a command with elevated privleges. Will ask you for a password. Only possible, if you were granted administrative rights on the system.
-
-## Advanced
-|Command|Example|Comment|
-|---|---|---|
 |less `<filename>` | less text.txt | **display contents** <br> of a file, read-only <br> <kbd>h</kbd> help <br> <kbd>q</kbd> close<br> <kbd>f</kbd>,<kbd>b</kbd> forward, backward one page <br> <kbd>e</kbd>,<kbd>y</kbd> forward, backward single line <br>/`<word>` search <br> <kbd>n</kbd>,<kbd>p</kbd> next, previous `<word>` during search <br> -i activate case insentitive search |
 | `<command>` &#124; less| history  &#124; less <br> ls  &#124; less | **pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
-| `<command>` > `<filename>` <br> `<command>` >> `<filename>` | ls -a > result.txt <br> ls -a >> result.txt | **redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file |
-|ssh `<server>` <br> ssh -t `<server>` "`<command>`" | ssh `username@example.com` <br> ssh -t `username@example.com` "ls -a" | **secure shell** <br> Connect to a server <br> -t Close connection immediately after the command is done |
-|exit | | Quit server connection |
-|scp `<source>` `<target>` | `scp username@example.com:/my/folder/*.txt .` | **secure copy**  <br> files from/to a server <br> -r recursive (include subfolders)<br> The example copies all files from the given directory then end in .txt to the local directory (dot) |
-|rsync `<source>` `<target>` | rsync --progress file.txt servername:/home/user/data | **rsync** <br> copy files from/to a server |
 |nano `<filename>` | nano text.txt | **file editor** <br> <kbd>Ctrl</kbd>+<kbd>x</kbd> to close <br> <kbd>Alt</kbd>+<kbd>/</kbd> to go to the end of a file |
 
 
+## Advanced
+
+|Command|Example|Comment|
+|---|---|---|
+|scp `<source>` `<target>` | `scp username@example.com:/my/folder/*.txt .` | **secure copy**  <br> files from/to a server <br> -r recursive (include subfolders)<br> The example copies all files from the given directory then end in .txt to the local directory (dot) |
+|rsync `<source>` `<target>` | rsync -aP file.txt servername:/home/user/data | **rsync** <br> copy files from/to a server |
+| `<command>` > `<filename>` <br> `<command>` >> `<filename>` | ls -a > result.txt <br> ls -a >> result.txt | **redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file |
+|ssh `<server>` <br> ssh -t `<server>` "`<command>`" | ssh `username@example.com` <br> ssh -t `username@example.com` "ls -a" | **secure shell** <br> Connect to a server <br> -t Close connection immediately after the command is done |
+|exit | | Quit server connection |
+|du `<directory>` | du -h <br> du -sh . <br> du -sh *  &#124; sort -h | **disk usage** <br> -s summary <br> -h human readable |
+|df `<directory>` | df -h | **disk free** <br> Show remaining disk space <br> -h human readable |
+|ls -1 &#124; wc -l | | Count number of files in current directory. |
+|htop| | View currently running processes. |
+
 ## Lesser used
+
 |Command|Example|Comment|
 |---|---|---|
 |touch `<filename>` | touch text.txt <br> touch makefile | **touch** a file.<br>Creates a new, empty file if the file does <br>not already exist.<br> Especially helpful to create makefiles under Windows.<br>Actually the command is used for changing file timestamps. |
 |stat `<filename>` | stat text.txt | Display file **status**, creation date, <br>last modification date, etc. |
-|du `<directory>` | du -s . <br> du -sh . <br> du -sh *  &#124; sort -h | **disk usage** <br> -s summary <br> -h human readable |
-|df `<directory>` | df -h . | Show remaining disk space <br> -h human readable |
 |chown `<username>` `<file>` | sudo chown alice folder | **change file owner** |
 |su `<username>`| su root | **switch user** |
 |passwd `<username>` | passwd alice | **change password** | 
 |usermod `<options>` `LOGIN` | usermod -g grpname alice | **modify a user account** |
 |getent group `<groupname>` | | **view members of group** |
 |id `<username>`<br>groups `<username>` | | **view groups of user** |
-|w | | **Show who is logged on** |
+
 
 ## Permissions
 
