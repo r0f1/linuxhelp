@@ -115,3 +115,42 @@ For directories, "s" means "sticky". If a directory has "s", then the owner and/
 |screen -r `<name>`| Reattach to session with `<name>` if there are multiple ones. |
 |screen -rx `<name>`| Attach to session that is already attached. |
 |<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>Esc</kbd> | Enter scroll mode. Use <kbd>↑</kbd> and <kbd>↓</kbd> or <kbd>Pg Up</kbd> and <kbd>Pg Dn</kbd> to scroll. Hit <kbd>Esc</kbd> to exit scroll mode. |
+
+## Misc
+
+### Creating an SSH key
+
+```bash
+# Creating
+ssh-keygen -t rsa -b 4096 -N "" -C "" -f keyname
+
+# Setting access rights
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+
+# ~/.ssh/config
+Host github
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_keyname
+```
+
+```bash
+# Checking the ssh procesd
+ssh -T git@github.com
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/keyname
+ssh -T git@github.com
+```
+
+### Useful .bashrc additions
+
+```bash
+# Detailed ls output
+alias ll='ls -halt'
+
+# Count files in directory
+alias fcount='ls -1 | wc -l'
+
+# Disable "Save workspace" promt when closing R
+alias R='R --no-save'
+```
