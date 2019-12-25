@@ -19,7 +19,7 @@
 
 |Command|Example|Comment|
 |---|---|---|
-|cd `<foldername>`|cd test <br> cd .. <br> cd ~ <br> cd /path/to/my/folder | **Change directory** <br>. (dot) is the current directory <br> .. (dotdot) is the upper/partent directory <br> / (slash) is the root directory <br> ~ (tilde) is your home directory |
+|cd `<foldername>`|cd test <br> cd .. <br> cd - <br> cd ~ <br> cd /path/to/my/folder | **Change directory** <br>. (dot) is the current directory <br> .. (dotdot) is the upper/partent directory <br> / (slash) is the root directory <br> ~ (tilde) is your home directory <br> - (minus) switches to the previous directory|
 |ls <br> ls `<options>` <br> ls `<foldername>` <br> ls `<pattern>` | ls <br> ls -la <br> ls -l -a (same as above) <br> ls -halt (more arguments) <br> ls -d */ (list all directories) <br> ls test (contents of subfolder) <br> ls *.sas (show only .sas files) | **List** contents of a folder <br> -h human readable <br> -a all <br> -l more information <br> -t order by time |
 |pwd | | **Print working directory** <br> shows the current path|
 |clear| | **Clear** the console <br>gives you a fresh view|
