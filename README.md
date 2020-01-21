@@ -119,6 +119,11 @@ For directories, "s" means "sticky". If a directory has "s", then the owner and/
 
 ## Misc
 
+### Finding out which linux you are using
+```bash
+uname -m && cat /etc/*release
+```
+
 ### Creating an SSH key
 
 ```bash
