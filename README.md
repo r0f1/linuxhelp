@@ -10,6 +10,7 @@
 |<kbd>↑</kbd>|&nbsp;|See previous command|
 |<kbd>Ctrl</kbd>+<kbd>c</kbd>|&nbsp;|Kill the current process or command (e.g. if something hangs)|
 |<kbd>Ctrl</kbd>+<kbd>d</kbd>|&nbsp;|Logout. Closes the console if you're not in an ssh session.|
+|sudo !!|&nbsp;|Repeat the last command with administrative privileges.|
 |`fc -l 0`|&nbsp;|Display all the past commands|
 |`fc -l -10`|&nbsp;|Display the past 10 commands|
 |<kbd>Ctrl</kbd>+<kbd>r</kbd>|&nbsp;|Search through your history. Start typing and it will auto-complete. Hit <kbd>Ctrl</kbd>+<kbd>r</kbd> again and it will cycle though the other auto-completion options. Hit <kbd>Enter</kbd> and the command will execute. Hit <kbd>←</kbd>,<kbd>→</kbd> to edit commands.
