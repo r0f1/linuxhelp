@@ -120,9 +120,15 @@ For directories, "s" means "sticky". If a directory has "s", then the owner and/
 
 ## Misc
 
-### Finding out which linux you are using
 ```bash
+# Finding out which linux you are using
 uname -m && cat /etc/*release
+
+# Bulk renaming of files
+rename 's/ch0/ch/gi' *.tiff
+
+# Rebinding keyboard shotcut Ctrl+C to Ctrl+J
+stty intr ^J
 ```
 
 ### Creating an SSH key
@@ -155,6 +161,10 @@ ssh -T git@github.com
 # Detailed ls output
 alias ls='ls --color=auto --group-directories-first --time-style=iso --quoting-style=literal'
 alias ll='ls -Fails'
+
+# Make output of df and du human readable
+alias df='df -h'
+alias du='du -h'
 
 # Count files in directory
 alias fcount='ls -1 | wc -l'
