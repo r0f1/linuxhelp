@@ -25,6 +25,8 @@
 |sudo `<command>`| sudo ls | **super user do** <br> Run a command with elevated privleges. Will ask you for a password. Only possible, if you were granted administrative rights on the system.
 |less `<filename>` | less text.txt | **display contents** <br> of a file, read-only <br> <kbd>h</kbd> help <br> <kbd>q</kbd> close<br> <kbd>f</kbd>,<kbd>b</kbd> forward, backward one page <br> <kbd>e</kbd>,<kbd>y</kbd> forward, backward single line <br>/`<word>` search <br> <kbd>n</kbd>,<kbd>p</kbd> next, previous `<word>` during search <br> -i activate case insentitive search |
 | `<command>` &#124; less| history  &#124; less <br> ls  &#124; less | **pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
+| `<command1>` ; `<command2>` | | *concatenate commands* <br> Execute `<command2>` after `<command1>`. |
+| `<command1>` && `<command2>` | | *double ampersand* <br> Execute `<command2>` after `<command1>` but only if `<command1>` finished successfully. |
 |nano `<filename>` | nano text.txt | **file editor** <br> <kbd>Ctrl</kbd>+<kbd>x</kbd> to close <br> <kbd>Alt</kbd>+<kbd>/</kbd> to go to the end of a file |
 |pwd | | **Print working directory** <br> shows the current path|
 |clear| | **Clear** the console <br>gives you a fresh view|
