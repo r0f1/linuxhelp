@@ -124,9 +124,6 @@ uname -m && cat /etc/*release
 
 # Bulk renaming of files
 rename 's/ch0/ch/gi' *.tiff
-
-# Rebinding keyboard shotcut Ctrl+C to Ctrl+J
-stty intr ^J
 ```
 
 ### Creating an SSH key
@@ -156,10 +153,6 @@ ssh -T git@github.com
 ### Useful .bashrc additions
 
 ```bash
-# Detailed ls output
-alias ls='ls --color=auto --group-directories-first --time-style=iso --quoting-style=literal'
-alias ll='ls -Fails'
-
 # Make output of df and du human readable
 alias df='df -h'
 alias du='du -h'
@@ -169,7 +162,4 @@ alias fcount='ls -1 | wc -l'
 
 # Disable "Save workspace" promt when closing R
 alias R='R --no-save'
-
-# Make FFPlay a bit more sane
-alias ffplay='ffplay -hide_banner -fast -autoexit -infbuf'
 ```
