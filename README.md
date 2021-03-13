@@ -163,3 +163,6 @@ alias fcount='ls -1 | wc -l'
 # Disable "Save workspace" promt when closing R
 alias R='R --no-save'
 ```
+
+### Resources
+ * [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)
