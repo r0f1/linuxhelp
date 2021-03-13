@@ -4,11 +4,11 @@
 
 |Command|Example|Comment|
 |--------|---|---|
-|man `<command>`|man cd<br />man ls|**Manual** <br> Get help (close with <kbd>q</kbd>)|
-|`<command>` --help|cd --help|Also **help**|
-|<kbd>Tab</kbd> (1x or 2x) |&nbsp; |Auto completion|
-|<kbd>↑</kbd>|&nbsp;|See previous command|
-|<kbd>Ctrl</kbd>+<kbd>c</kbd>|&nbsp;|Kill the current process or command (e.g. if something hangs)|
+|man `<command>`|man cd<br />man ls|**Manual** <br> Get help (close with <kbd>q</kbd>).|
+|`<command>` --help|cd --help|Also **help**.|
+|<kbd>Tab</kbd> (1x or 2x) |&nbsp; |Auto completion.|
+|<kbd>↑</kbd>|&nbsp;|See previous command.|
+|<kbd>Ctrl</kbd>+<kbd>c</kbd>|&nbsp;|Kill the current process or command (e.g. if something hangs).|
 |<kbd>Ctrl</kbd>+<kbd>d</kbd>|&nbsp;|Logout. Closes the console if you're not in an ssh session.|
 |<kbd>Ctrl</kbd>+<kbd>r</kbd>|&nbsp;|Search through your history. Start typing and it will auto-complete. Hit <kbd>Ctrl</kbd>+<kbd>r</kbd> again and it will cycle though the other auto-completion options. Hit <kbd>Enter</kbd> and the command will execute. Hit <kbd>←</kbd>,<kbd>→</kbd> to edit commands.
 
