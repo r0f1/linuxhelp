@@ -32,32 +32,32 @@
 |clear| | **Clear** the console <br>gives you a fresh view|
 |mkdir `<foldername>` |mkdir test | **Make directory** <br> creates a new folder with the given name|
 |chmod <permissions> <foldername>|chmod 777 test|**Change permissions** <br> for file <br> 777 gives the folder all possible rights |
-|chown `<username>` `<file>` | sudo chown alice folder | **change file owner** |
-|htop| | View currently running processes. |
+|chown `<username>` `<file>` | sudo chown alice folder | **Change file owner** |
+|htop| | **Task manager** <br> View currently running processes. |
 
 ## Advanced
 
 |Command|Example|Comment|
 |---|---|---|
-|du `<directory>` | du -h <br> du -sh . <br> du -sh *  &#124; sort -h | **disk usage** <br> -s summary <br> -h human readable |
-|df `<directory>` | df -h | **disk free** <br> Show remaining disk space <br> -h human readable |
-|ssh `<server>` <br> ssh -t `<server>` "`<command>`" | ssh `username@example.com` <br> ssh -t `username@example.com` "ls -a" | **secure shell** <br> Connect to a server <br> -t Close connection immediately after the command is done |
+|du `<directory>` | du -h <br> du -sh . <br> du -sh *  &#124; sort -h | **Disk usage** <br> -s summary <br> -h human readable |
+|df `<directory>` | df -h | **Disk free** <br> Show remaining disk space <br> -h human readable |
+|ssh `<server>` <br> ssh -t `<server>` "`<command>`" | ssh `username@example.com` <br> ssh -t `username@example.com` "ls -a" | **Secure shell** <br> Connect to a server <br> -t Close connection immediately after the command is done |
 |exit | | Quit server connection |
-|scp `<source>` `<target>` | `scp username@example.com:/my/folder/*.txt .` | **secure copy**  <br> files from/to a server <br> -r recursive (include subfolders)<br> The example copies all files from the given directory then end in .txt to the local directory (dot) |
-|rsync `<source>` `<target>` | rsync -aP file.txt servername:/home/user/data | **rsync** <br> copy files from/to a server |
-| `<command>` > `<filename>` <br> `<command>` >> `<filename>` | ls -a > result.txt <br> ls -a >> result.txt | **redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file |
+|scp `<source>` `<target>` | `scp username@example.com:/my/folder/*.txt .` | **Secure copy**  <br> files from/to a server <br> -r recursive (include subfolders)<br> The example copies all files from the given directory then end in .txt to the local directory (dot) |
+|rsync `<source>` `<target>` | rsync -aP file.txt servername:/home/user/data | **Rsync** <br> copy files from/to a server |
+| `<command>` > `<filename>` <br> `<command>` >> `<filename>` | ls -a > result.txt <br> ls -a >> result.txt | **Redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file |
 
 ## Lesser used
 
 |Command|Example|Comment|
 |---|---|---|
-|touch `<filename>` | touch text.txt <br> touch makefile | **touch** a file.<br>Creates a new, empty file if the file does <br>not already exist.<br> Especially helpful to create makefiles under Windows.<br>Actually the command is used for changing file timestamps. |
-|stat `<filename>` | stat text.txt | Display file **status**, creation date, <br>last modification date, etc. |
-|su `<username>`| su root | **switch user** |
-|passwd `<username>` | passwd alice | **change password** | 
-|usermod `<options>` `LOGIN` | usermod -g grpname alice | **modify a user account** |
-|getent group `<groupname>` | | **view members of group** |
-|id `<username>`<br>groups `<username>` | | **view groups of user** |
+|touch `<filename>` | touch text.txt <br> touch makefile | **Touch** a file.<br>Creates a new, empty file if the file does <br>not already exist.<br> Especially helpful to create makefiles under Windows.<br>Actually the command is used for changing file timestamps. |
+|stat `<filename>` | stat text.txt | Display file **Status**, creation date, <br>last modification date, etc. |
+|su `<username>`| su root | **Switch user** |
+|passwd `<username>` | passwd alice | **Change password** | 
+|usermod `<options>` `LOGIN` | usermod -g grpname alice | **Modify a user account** |
+|getent group `<groupname>` | | **View members of group** |
+|id `<username>`<br>groups `<username>` | | **View groups of user** |
 |ls -1 &#124; wc -l | | Count number of files in current directory. |
 |watch| watch -n60 ls | Repeat a command every n seconds. |
 |which | which nano | Display where the command / program is coming from. |
