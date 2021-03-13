@@ -164,5 +164,5 @@ alias fcount='ls -1 | wc -l'
 alias R='R --no-save'
 ```
 
-### Resources
+## Resources
  * [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)
