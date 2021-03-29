@@ -14,69 +14,98 @@
 |<kbd>Ctrl</kbd>+<kbd>W</kbd>|&nbsp;|Delete one word left of the cursor.|
 |<kbd>Ctrl</kbd>+<kbd>U</kbd>|&nbsp;|Delete entire line.|
 
-## Basic
+## Basics
 
 |Command|Example|Comment|
 |---|---|---|
 |sudo `<command>`| sudo ls | **Super user do** <br> Run a command with elevated privleges. Will ask you for a password. Only possible, if you were granted administrative rights on the system.
-| `<command1>` ; `<command2>` | | **Concatenate commands** <br> Execute `<command2>` after `<command1>`. |
-| `<command1>` && `<command2>` | | **Double ampersand** <br> Execute `<command2>` after `<command1>` but only if `<command1>` finished successfully. |
-|clear| | **Clear** the console <br>gives you a fresh view|
-
-## Navigation and Files
-
-|Command|Example|Comment|
-|---|---|---|
-|pwd | | **Print working directory** <br> shows the current path|
 |cd `<folder>`|cd test <br> cd .. <br> cd - <br> cd ~ <br> cd /path/to/my/folder | **Change directory** <br>. (dot) is the current directory <br> .. (dotdot) is the upper/partent directory <br> / (slash) is the root directory <br> ~ (tilde) is your home directory <br> - (minus) switches to the previous directory|
 |ls <br> ls `<options>` <br> ls `<folder>` <br> ls `<pattern>` | ls <br> ls -la <br> ls -l -a (same as above) <br> ls -halt (more arguments) <br> ls -d */ (list all directories) <br> ls test (contents of subfolder) <br> ls *.txt (show only .txt files) | **List** contents of a folder <br> -h human readable <br> -a all <br> -l more information <br> -t order by time |
+|mkdir `<folder>` |mkdir test | **Make directory** <br> creates a new folder with the given name|
+|pwd | | **Print working directory** <br> shows the current path|
 |mv  `<source>` `<target>` | mv text.txt test <br> mv test.txt bla.txt |**Move** a file <br> Can also be used for renaming (second example)|
 |cp `<source>` `<target>`| cp text.txt test <br> cp -p text.txt test | **Copy** a file <br> -p preserves mode, ownership, and timestamps<br> Can also rename. |
 |rm `<file>` <br> rm -rf `<folder>`|rm text.txt <br> rm -rf test  <br> rm \*.tmp (removes all files with file ending \*.tmp)| **Remove** <br> *Warning: Cannot be undone!* <br> -f force, no confirmation<br> dialog, no warnings <br> -r recursive, for folders |
+|clear| | **Clear** the console <br>gives you a fresh view|
 
-
-## Files 
+## More Basics
 
 |Command|Example|Comment|
 |---|---|---|
 |head  `<file>` <br> tail `<file>` | head text.txt <br> head -n 20 text.txt | **Display first/last lines of file** <br> Default n=10.|
 |less `<file>` | less text.txt | **Display contents of a file** <br> of a file, read-only <br> <kbd>h</kbd> help <br> <kbd>q</kbd> close<br> <kbd>f</kbd>,<kbd>b</kbd> forward, backward one page <br> <kbd>e</kbd>,<kbd>y</kbd> forward, backward single line <br>/`<word>` search <br> <kbd>n</kbd>,<kbd>p</kbd> next, previous `<word>` during search <br> -i activate case insentitive search |
-
-| `<command>` &#124; less| history  &#124; less <br> ls  &#124; less | **Pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
-
 |nano `<file>` | nano text.txt | **File editor** <br> <kbd>Ctrl</kbd>+<kbd>x</kbd> to close <br> <kbd>Alt</kbd>+<kbd>/</kbd> to go to the end of a file |
-
-|mkdir `<folder>` |mkdir test | **Make directory** <br> creates a new folder with the given name|
-|chmod <permissions> <folder>|chmod 777 test|**Change permissions** <br> for file <br> 777 gives the folder all possible rights |
+|chmod <permissions> <folder>|chmod 777 test|**Change permissions** <br> for file <br> 777 gives the folder all possible rights. <br> Further explanation see below. |
 |chown `<username>` `<file>` | sudo chown alice folder | **Change file owner** |
-|htop| | **Task manager** <br> View currently running processes. |
-
-## Advanced
-
-|Command|Example|Comment|
-|---|---|---|
 |du `<directory>` | du -h <br> du -sh . <br> du -sh *  &#124; sort -h | **Disk usage** <br> -s summary <br> -h human readable |
 |df `<directory>` | df -h | **Disk free** <br> Show remaining disk space <br> -h human readable |
-|ssh `<server>` <br> ssh -t `<server>` "`<command>`" | ssh `username@example.com` <br> ssh -t `username@example.com` "ls -a" | **Secure shell** <br> Connect to a server <br> -t Close connection immediately after the command is done |
-|exit | | Quit server connection |
-|scp `<source>` `<target>` | `scp username@example.com:/my/folder/*.txt .` | **Secure copy**  <br> files from/to a server <br> -r recursive (include subfolders)<br> The example copies all files from the given directory then end in .txt to the local directory (dot) |
-|rsync `<source>` `<target>` | rsync -aP file.txt servername:/home/user/data | **Rsync** <br> copy files from/to a server |
-| `<command>` > `<filename>` <br> `<command>` >> `<filename>` | ls -a > result.txt <br> ls -a >> result.txt | **Redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file |
+|htop| | **Task manager** <br> View currently running processes. <kbd>Q</kbd> to close.|
 
-## Lesser used
+## Multiple Commands
 
 |Command|Example|Comment|
 |---|---|---|
-|touch `<filename>` | touch text.txt <br> touch makefile | **Touch** a file.<br>Creates a new, empty file if the file does <br>not already exist.<br> Especially helpful to create makefiles under Windows.<br>Actually the command is used for changing file timestamps. |
+| `<command1>` ; `<command2>` | | **Concatenate commands** <br> Execute `<command2>` after `<command1>`. |
+| `<command1>` && `<command2>` | | **Double ampersand** <br> Execute `<command2>` after `<command1>` but only if `<command1>` finished successfully. |
+| `<command>` > `<file>` <br> `<command>` >> `<file>` <br> `<command>` 2> `<file>` | ls -a > result.txt <br> ls -a >> result.txt | **Redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file <br> 2> redirects the errors |
+| `<command1>` &#124; `<command2>` | history  &#124; less <br> ls  &#124; less | **Pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
+
+## Search
+TODO grep and find
+
+## Screen
+|Command|Comment|
+|---|---|
+|screen | Create a new session. |
+|<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>D</kbd> | Detach from current screen session. |
+|<kbd>Ctrl</kbd>+<kbd>D</kbd> | End current session. Similart to `exit`. |
+|screen -r | Reattach to session. |
+|screen -ls | List all sessions. |
+|screen -S `<name>` -L | Create a new screen session `<name>` with logging enabled. |
+|screen -r `<name>`| Reattach to session with `<name>` if there are multiple ones. |
+|screen -rx `<name>`| Attach to session that is already attached. |
+|<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>Esc</kbd> | Enter scroll mode. Use <kbd>↑</kbd> and <kbd>↓</kbd> or <kbd>Pg Up</kbd> and <kbd>Pg Dn</kbd> to scroll. Hit <kbd>Esc</kbd> to exit scroll mode. |
+
+## Misc
+|Command|Example|Comment|
+|---|---|---|
+|passwd `<username>` | passwd alice | **Change password** | 
+|rsync `<source>` `<target>` | rsync -aP file.txt servername:/home/user/data | **Rsync** <br> copy files from/to a server |
+|scp `<source>` `<target>` | `scp username@example.com:/my/folder/*.txt .` | **Secure copy**  <br> files from/to a server <br> -r recursive (include subfolders)<br> The example copies all files from the given directory then end in .txt to the local directory (dot) |
+|ssh `<server>` <br> ssh -t `<server>` "`<command>`" | ssh `username@example.com` <br> ssh -t `username@example.com` "ls -a" | **Secure shell** <br> Connect to a server <br> -t Close connection immediately after the command is done <br> Further explanation see below. |
 |stat `<filename>` | stat text.txt | Display file **Status**, creation date, <br>last modification date, etc. |
 |su `<username>`| su root | **Switch user** |
-|passwd `<username>` | passwd alice | **Change password** | 
-|usermod `<options>` `LOGIN` | usermod -g grpname alice | **Modify a user account** |
-|getent group `<groupname>` | | **View members of group** |
-|id `<username>`<br>groups `<username>` | | **View groups of user** |
-|ls -1 &#124; wc -l | | Count number of files in current directory. |
+|touch `<filename>` | touch text.txt <br> touch makefile | **Touch** a file.<br>Creates a new, empty file if the file does <br>not already exist.<br> Especially helpful to create makefiles under Windows.<br>Actually the command is used for changing file timestamps. |
 |watch| watch -n60 ls | Repeat a command every n seconds. |
-|which | which nano | Display where the command / program is coming from. |
+|which| which nano | Display where the command / program is coming from. |
+
+## Creating an SSH key
+
+```bash
+# Creating
+ssh-keygen -t rsa -b 4096 -N "" -C "" -f keyname
+mv keyname* ~/.ssh
+
+# Setting access rights
+chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
+
+# ~/.ssh/config
+Host github
+HostName github.com
+User git
+IdentityFile ~/.ssh/keyname
+
+# This logs into the server, and copies the public key to it.
+ssh-copy-id -i ~/.ssh/keyname user@remote_machine
+```
+
+```bash
+# Checking the ssh procesd
+ssh -T git@github.com
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/keyname
+ssh -T git@github.com
+```
 
 ## Permissions
 
@@ -119,20 +148,8 @@ Now "s", for files, means "setuid exec." If a file has s permission, then it's e
 For directories, "s" means "sticky". If a directory has "s", then the owner and/or group of any files put into the directory are set to the owner/group of the directory. This is often used on CVS repositories, so that the files in the repository end up all owned by the same person and/or group, even though they're put in by different people. I use g+s on all the CVS repositories I set up.
 </details>
 
-## Screen
 
-|Command|Comment|
-|---|---|
-|screen | Create a new session. |
-|screen -S `<name>` -L | Create a new screen session `<name>` with logging enabled. |
-|<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>D</kbd> | Detach from current session. |
-|screen -ls | List all sessions. |
-|screen -r | Reattach to session. |
-|screen -r `<name>`| Reattach to session with `<name>` if there are multiple ones. |
-|screen -rx `<name>`| Attach to session that is already attached. |
-|<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>Esc</kbd> | Enter scroll mode. Use <kbd>↑</kbd> and <kbd>↓</kbd> or <kbd>Pg Up</kbd> and <kbd>Pg Dn</kbd> to scroll. Hit <kbd>Esc</kbd> to exit scroll mode. |
-
-## Misc
+## Snippets and Useful .bashrc Additions
 
 ```bash
 # Finding out which linux you are using
@@ -141,32 +158,6 @@ uname -m && cat /etc/*release
 # Bulk renaming of files
 rename 's/ch0/ch/gi' *.tiff
 ```
-
-### Creating an SSH key
-
-```bash
-# Creating
-ssh-keygen -t rsa -b 4096 -N "" -C "" -f keyname
-
-# Setting access rights
-chmod 700 ~/.ssh && chmod 600 ~/.ssh/*
-
-# ~/.ssh/config
-Host github
-HostName github.com
-User git
-IdentityFile ~/.ssh/id_keyname
-```
-
-```bash
-# Checking the ssh procesd
-ssh -T git@github.com
-eval $(ssh-agent -s)
-ssh-add ~/.ssh/keyname
-ssh -T git@github.com
-```
-
-### Useful .bashrc additions
 
 ```bash
 # Make output of df and du human readable
@@ -179,6 +170,15 @@ alias fcount='ls -1 | wc -l'
 # Disable "Save workspace" promt when closing R
 alias R='R --no-save'
 ```
+
+## Lesser used commands
+
+|Command|Example|Comment|
+|---|---|---|
+|id `<username>`<br>groups `<username>` | | **View groups of user** |
+|getent group `<groupname>` | | **View members of group** |
+|usermod `<options>` `LOGIN` | usermod -g grpname alice | **Modify a user account** |
+
 
 ## Resources
  * [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)
