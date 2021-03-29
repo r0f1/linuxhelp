@@ -21,12 +21,12 @@
 |sudo `<command>`| sudo ls | **Super user do** <br> Run a command with elevated privleges. Will ask you for a password. Only possible, if you were granted administrative rights on the system.
 |cd `<folder>`|cd test <br> cd .. <br> cd - <br> cd ~ <br> cd /path/to/my/folder | **Change directory** <br>. (dot) is the current directory <br> .. (dotdot) is the upper/partent directory <br> / (slash) is the root directory <br> ~ (tilde) is your home directory <br> - (minus) switches to the previous directory|
 |ls <br> ls `<options>` <br> ls `<folder>` <br> ls `<pattern>` | ls <br> ls -la <br> ls -l -a (same as above) <br> ls -halt (more arguments) <br> ls -d */ (list all directories) <br> ls test (contents of subfolder) <br> ls *.txt (show only .txt files) | **List** contents of a folder <br> -h human readable <br> -a all <br> -l more information <br> -t order by time |
-|mkdir `<folder>` |mkdir test | **Make directory** <br> creates a new folder with the given name|
-|pwd | | **Print working directory** <br> shows the current path|
+|mkdir `<folder>` |mkdir test| **Make directory** <br> Creates a new folder with the given name.|
+|pwd | | **Print working directory** <br> Shows the current path.|
 |mv  `<source>` `<target>` | mv text.txt test <br> mv test.txt bla.txt |**Move** a file <br> Can also be used for renaming (second example)|
 |cp `<source>` `<target>`| cp text.txt test <br> cp -p text.txt test | **Copy** a file <br> -p preserves mode, ownership, and timestamps<br> Can also rename. |
 |rm `<file>` <br> rm -rf `<folder>`|rm text.txt <br> rm -rf test  <br> rm \*.tmp (removes all files with file ending \*.tmp)| **Remove** <br> *Warning: Cannot be undone!* <br> -f force, no confirmation<br> dialog, no warnings <br> -r recursive, for folders |
-|clear| | **Clear** the console <br>gives you a fresh view|
+|clear| | **Clear** the console <br>Gives you a fresh view.|
 
 ## More Basics
 
@@ -38,7 +38,7 @@
 |chmod <permissions> <folder>|chmod 777 test|**Change permissions** <br> for file <br> 777 gives the folder all possible rights. <br> Further explanation see below. |
 |chown `<username>` `<file>` | sudo chown alice folder | **Change file owner** |
 |du `<directory>` | du -h <br> du -sh . <br> du -sh *  &#124; sort -h | **Disk usage** <br> -s summary <br> -h human readable |
-|df `<directory>` | df -h | **Disk free** <br> Show remaining disk space <br> -h human readable |
+|df `<directory>` | df -h | **Disk free** <br> Show remaining disk space. <br> -h human readable |
 |htop| | **Task manager** <br> View currently running processes. <kbd>Q</kbd> to close.|
 
 ## Multiple Commands
