@@ -51,7 +51,8 @@
 | `<command1>` &#124; `<command2>` | history  &#124; less <br> ls  &#124; less | **Pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
 
 ## Search
-TODO grep and find
+[fselect](https://github.com/jhspetersson/fselect) - Search for files in a modern, SQL-like fashion.
+TODO grep, find
 
 ## Screen
 |Command|Comment|
