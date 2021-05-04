@@ -177,14 +177,6 @@ alias fcount='ls -1 | wc -l'
 alias R='R --no-save'
 ```
 
-## Lesser used commands
-
-|Command|Example|Comment|
-|---|---|---|
-|id `<username>`<br>groups `<username>` | | **View groups of user** |
-|getent group `<groupname>` | | **View members of group** |
-|usermod `<options>` `LOGIN` | usermod -g grpname alice | **Modify a user account** |
-
-
 ## Resources
+ * [Presentation](https://ketancmaheshwari.github.io/pdfs/LPT_LISA.pdf)
  * [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)
