@@ -11,8 +11,6 @@
 |<kbd>Ctrl</kbd>+<kbd>C</kbd>|&nbsp;|Kill the current process or command (e.g. if something hangs).|
 |<kbd>Ctrl</kbd>+<kbd>D</kbd>|&nbsp;|Logout. Closes the console if you're not in an ssh session. Similar to `exit`. |
 |<kbd>Ctrl</kbd>+<kbd>R</kbd>|&nbsp;|Search through your history. Start typing and it will auto-complete. Hit <kbd>Ctrl</kbd>+<kbd>r</kbd> again and it will cycle though the other auto-completion options. Hit <kbd>Enter</kbd> and the command will execute. Hit <kbd>←</kbd>,<kbd>→</kbd> to edit commands.|
-|<kbd>Ctrl</kbd>+<kbd>W</kbd>|&nbsp;|Delete one word left of the cursor.|
-|<kbd>Ctrl</kbd>+<kbd>U</kbd>|&nbsp;|Delete entire line.|
 
 ## Basics
 
@@ -42,7 +40,6 @@
 |htop| | **Task manager** <br> View currently running processes. <kbd>Q</kbd> to close.|
 
 ## Multiple Commands
-
 |Command|Example|Comment|
 |---|---|---|
 | `<command1>` ; `<command2>` | | **Concatenate commands** <br> Execute `<command2>` after `<command1>`. |
@@ -79,6 +76,14 @@ TODO grep, find
 |touch `<filename>` | touch text.txt <br> touch makefile | **Touch** a file.<br>Creates a new, empty file if the file does <br>not already exist.<br> Especially helpful to create makefiles under Windows.<br>Actually the command is used for changing file timestamps. |
 |watch| watch -n60 ls | Repeat a command every n seconds. |
 |which| which nano | Display where the command / program is coming from. |
+
+## Cursor Tricks
+|Command|Example|Comment|
+|<kbd>Ctrl</kbd>+<kbd>A</kbd>|&nbsp;|Jump to beginning.|
+|<kbd>Ctrl</kbd>+<kbd>E</kbd>|&nbsp;|Jump to end.|
+|<kbd>Ctrl</kbd>+<kbd>W</kbd>|&nbsp;|Delete one word left of the cursor.|
+|<kbd>Ctrl</kbd>+<kbd>U</kbd>|&nbsp;|Delete entire line.|
+|<kbd>Ctrl</kbd>+<kbd>Y</kbd>|&nbsp;|Paste back what you just deleted.|
 
 ## Creating an SSH key
 
