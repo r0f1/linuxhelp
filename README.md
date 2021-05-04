@@ -48,8 +48,12 @@
 | `<command1>` &#124; `<command2>` | history  &#124; less <br> ls  &#124; less | **Pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
 
 ## Search
-[fselect](https://github.com/jhspetersson/fselect) - Search for files in a modern, SQL-like fashion.
-TODO grep, find
+[fselect](https://github.com/jhspetersson/fselect) - Search for files in a modern, SQL-like fashion.  
+
+|Command|Example|Comment|
+|---|---|---|
+|grep|&nbsp;|&nbsp;|
+|find|&nbsp;|&nbsp;|
 
 ## Screen
 |Command|Comment|
@@ -78,12 +82,13 @@ TODO grep, find
 |which| which nano | Display where the command / program is coming from. |
 
 ## Cursor Tricks
-|Command|Example|Comment|
-|<kbd>Ctrl</kbd>+<kbd>A</kbd>|&nbsp;|Jump to beginning.|
-|<kbd>Ctrl</kbd>+<kbd>E</kbd>|&nbsp;|Jump to end.|
-|<kbd>Ctrl</kbd>+<kbd>W</kbd>|&nbsp;|Delete one word left of the cursor.|
-|<kbd>Ctrl</kbd>+<kbd>U</kbd>|&nbsp;|Delete entire line.|
-|<kbd>Ctrl</kbd>+<kbd>Y</kbd>|&nbsp;|Paste back what you just deleted.|
+|Command|Comment|
+|---|---|
+|<kbd>Ctrl</kbd>+<kbd>A</kbd>|Jump to beginning.|
+|<kbd>Ctrl</kbd>+<kbd>E</kbd>|Jump to end.|
+|<kbd>Ctrl</kbd>+<kbd>W</kbd>|Delete one word left of the cursor.|
+|<kbd>Ctrl</kbd>+<kbd>U</kbd>|Delete entire line.|
+|<kbd>Ctrl</kbd>+<kbd>Y</kbd>|Paste back what you just deleted.|
 
 ## Creating an SSH key
 
