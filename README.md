@@ -183,5 +183,6 @@ alias R='R --no-save'
 ```
 
 ## Resources
+ * [Modern Unix Alternatives](https://github.com/ibraheemdev/modern-unix)
  * [Presentation](https://ketancmaheshwari.github.io/pdfs/LPT_LISA.pdf)
  * [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)
