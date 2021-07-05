@@ -19,7 +19,7 @@
 |sudo `<command>`| sudo ls | **Super user do** <br> Run a command with elevated privleges. Will ask you for a password. Only possible, if you were granted administrative rights on the system.
 |cd `<folder>`|cd test <br> cd .. <br> cd - <br> cd ~ <br> cd /path/to/my/folder | **Change directory** <br>. (dot) is the current directory <br> .. (dotdot) is the upper/partent directory <br> / (slash) is the root directory <br> ~ (tilde) is your home directory <br> - (minus) switches to the previous directory|
 |ls <br> ls `<options>` <br> ls `<folder>` <br> ls `<pattern>` | ls <br> ls -la <br> ls -l -a (same as above) <br> ls -halt (more arguments) <br> ls -d */ (list all directories) <br> ls test (contents of subfolder) <br> ls *.txt (show only .txt files) | **List** contents of a folder <br> -h human readable <br> -a all <br> -l more information <br> -t order by time |
-|mkdir `<folder>` |mkdir test| **Make directory** <br> Creates a new folder with the given name.|
+|mkdir `<folder>` <br> mkdir -p `<path>` |mkdir test| **Make directory** <br> Creates a new immediate subfolder with the given name. <br> -p Create path. |
 |pwd | | **Print working directory** <br> Shows the current path.|
 |mv  `<source>` `<target>` | mv text.txt test <br> mv test.txt bla.txt |**Move** a file <br> Can also be used for renaming (second example)|
 |cp `<source>` `<target>`| cp text.txt test <br> cp -p text.txt test | **Copy** a file <br> -p preserves mode, ownership, and timestamps<br> Can also rename. |
