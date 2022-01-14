@@ -2,7 +2,7 @@
 
 ## Help
 
-|Command|Example|Comment|
+|Command<img width=150/>|Example<img width=150/>|Comment|
 |--------|---|---|
 |man `<command>`|man cd<br />man ls|**Manual** <br> Get help (close with <kbd>q</kbd>).|
 |`<command>` --help|cd --help|Also **help**.|
@@ -14,9 +14,9 @@
 
 ## Basics
 
-|Command|Example|Comment|
+|Command<img width=350/>|Example|Comment|
 |---|---|---|
-|sudo `<command>`| sudo ls | **Super user do** <br> Run a command with elevated privleges. Will ask you for a password. Only possible, if you were granted administrative rights on the system.
+|sudo `<command>`| sudo ls <br> sudo !! | **Super user do** <br> Run a command with elevated privleges. Will ask you for a password. Only possible, if you were granted administrative rights on the system. sudo !! executes the last command with elevated privleges.
 |cd `<folder>`|cd test <br> cd .. <br> cd - <br> cd ~ <br> cd /path/to/my/folder | **Change directory** <br>. (dot) is the current directory <br> .. (dotdot) is the upper/partent directory <br> / (slash) is the root directory <br> ~ (tilde) is your home directory <br> - (minus) switches to the previous directory|
 |ls <br> ls `<options>` <br> ls `<folder>` <br> ls `<pattern>` | ls <br> ls -la <br> ls -l -a (same as above) <br> ls -halt (more arguments) <br> ls -d */ (list all directories) <br> ls test (contents of subfolder) <br> ls *.txt (show only .txt files) | **List** contents of a folder <br> -h human readable <br> -a all <br> -l more information <br> -t order by time |
 |mkdir `<folder>` <br> mkdir -p `<path>` |mkdir test| **Make directory** <br> Creates a new immediate subfolder with the given name. <br> -p Create path. |
@@ -41,7 +41,7 @@
 |htop| | **Task manager** <br> View currently running processes. <kbd>Q</kbd> to close.|
 
 ## Multiple Commands
-|Command|Example|Comment|
+|Command<img width=110/>|Example<img width=100/>|Comment|
 |---|---|---|
 | `<cmd1>` ; `<cmd2>` | | **Concatenate commands** <br> Execute `<command2>` after `<command1>`. |
 | `<cmd1>` && `<cmd2>` | | **Double ampersand** <br> Execute `<command2>` after `<command1>` but only if `<command1>` finished successfully. |
@@ -70,7 +70,7 @@
 |<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>Esc</kbd> | Enter scroll mode. Use <kbd>↑</kbd> and <kbd>↓</kbd> or <kbd>Pg Up</kbd> and <kbd>Pg Dn</kbd> to scroll. Hit <kbd>Esc</kbd> to exit scroll mode. |
 
 ## Misc
-|Command|Example|Comment|
+|Command<img width=300/>|Example|Comment|
 |---|---|---|
 |passwd `<username>` | passwd alice | **Change password** | 
 |rsync `<source>` `<target>` | rsync -aP file.txt servername:/home/user/data | **Rsync** <br> copy files from/to a server |
