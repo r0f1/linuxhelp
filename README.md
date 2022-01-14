@@ -43,10 +43,10 @@
 ## Multiple Commands
 |Command|Example|Comment|
 |---|---|---|
-| `<command1>` ; `<command2>` | | **Concatenate commands** <br> Execute `<command2>` after `<command1>`. |
-| `<command1>` && `<command2>` | | **Double ampersand** <br> Execute `<command2>` after `<command1>` but only if `<command1>` finished successfully. |
-| `<command>` > `<file>` <br> `<command>` >> `<file>` <br> `<command>` 2> `<file>` | ls -a > result.txt <br> ls -a >> result.txt | **Redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file <br> 2> redirects the errors |
-| `<command1>` &#124; `<command2>` | history  &#124; less <br> ls  &#124; less | **Pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
+| `<cmd1>` ; `<cmd2>` | | **Concatenate commands** <br> Execute `<command2>` after `<command1>`. |
+| `<cmd1>` && `<cmd2>` | | **Double ampersand** <br> Execute `<command2>` after `<command1>` but only if `<command1>` finished successfully. |
+| `<cmd>` > `<file>` <br> `<cmd>` >> `<file>` <br> `<cmd>` 2> `<file>`  <br> `<cmd>` &> `<file>` | ls -a > result.txt <br> ls -a >> result.txt | **Redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file <br> 2> redirects the errors <br> &> redirects both standard output and standard errors |
+| `<cmd1>` &#124; `<cmd2>` | history  &#124; less <br> ls  &#124; less | **Pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
 
 ## Search
 [fselect](https://github.com/jhspetersson/fselect) - Search for files in a modern, SQL-like fashion.  
