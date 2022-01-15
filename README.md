@@ -61,7 +61,7 @@
 |---|---|
 |screen | Create a new session. |
 |<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>D</kbd> | Detach from current screen session. |
-|<kbd>Ctrl</kbd>+<kbd>D</kbd> | End current session. Similart to `exit`. |
+|<kbd>Ctrl</kbd>+<kbd>D</kbd> | End current session. Similar to `exit`. |
 |screen -r | Reattach to session. |
 |screen -ls | List all sessions. |
 |screen -S `<name>` -L | Create a new screen session `<name>` with logging enabled. |
