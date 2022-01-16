@@ -43,8 +43,8 @@
 ## Multiple Commands
 |Command<img width=110/>|Example<img width=100/>|Comment|
 |---|---|---|
-| `<cmd1>` ; `<cmd2>` | | **Concatenate commands** <br> Execute `<command2>` after `<command1>`. |
-| `<cmd1>` && `<cmd2>` | | **Double ampersand** <br> Execute `<command2>` after `<command1>` but only if `<command1>` finished successfully. |
+| `<cmd1>` ; `<cmd2>` | | **Concatenate commands** <br> Execute `<cmd2>` after `<cmd1>`. |
+| `<cmd1>` && `<cmd2>` | | **Double ampersand** <br> Execute `<cmd2>` after `<cmd1>` but only if `<cmd1>` finished successfully. |
 | `<cmd>` > `<file>` <br> `<cmd>` >> `<file>` <br> `<cmd>` 2> `<file>`  <br> `<cmd>` &> `<file>` | ls -a > result.txt <br> ls -a >> result.txt | **Redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file <br> 2> redirects the errors <br> &> redirects both standard output and standard error |
 | `<cmd1>` &#124; `<cmd2>` | history  &#124; less <br> ls  &#124; less | **Pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
 
