@@ -90,7 +90,7 @@ grep 'needle' haystack.txt
 # Search in .py files of current and all subdirectories, ignore case, print filenames only
 grep -Rli --include=*.py 'needle' *
 ```
-[RegExr](https://regexr.com/) - Learn and build regular expressions.  
+More: [Regex Intro](https://github.com/zeeshanu/learn-regex), [Ex1](http://www.robelle.com/smugbook/regexpr.html), [Ex2](http://marvin.cs.uidaho.edu/Teaching/CS445/regex.html), [RegExr](https://regexr.com/). 
 
 ### Find
 ```bash
@@ -114,7 +114,7 @@ find . -type f -name "*.py"
 # List all files ending in .py, containing needle, hide error messages
 find . -type f -name "*.py" -exec grep -li 'needle' {} +
 ```
-
+More: [Ex1](http://www.binarytides.com/linux-find-command-examples/), [Ex2](https://en.wikibooks.org/wiki/Guide_to_Unix/Commands/Finding_Files). 
 
 ## Screen
 |Command|Comment|
