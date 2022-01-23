@@ -1,7 +1,6 @@
 # Linux commands
 
 ## Help
-
 |Command<img width=150/>|Example<img width=150/>|Comment|
 |--------|---|---|
 |man `<command>`|man cd<br />man ls|**Manual** <br> Get help (close with <kbd>q</kbd>).|
@@ -13,12 +12,11 @@
 |<kbd>Ctrl</kbd>+<kbd>R</kbd>|&nbsp;|Search through your history. Start typing and it will auto-complete. Hit <kbd>Ctrl</kbd>+<kbd>r</kbd> again and it will cycle though the other auto-completion options. Hit <kbd>Enter</kbd> and the command will execute. Hit <kbd>←</kbd>,<kbd>→</kbd> to edit commands.|
 
 ## Basics
-
 |Command<img width=350/>|Example|Comment|
 |---|---|---|
 |sudo `<command>`| sudo ls <br> sudo !! | **Super user do** <br> Run a command with elevated privleges. Will ask you for a password. Only possible, if you were granted administrative rights on the system. sudo !! executes the last command with elevated privleges.
 |cd `<folder>`|cd test <br> cd .. <br> cd - <br> cd ~ <br> cd /path/to/my/folder | **Change directory** <br>. (dot) is the current directory <br> .. (dotdot) is the upper/partent directory <br> / (slash) is the root directory <br> ~ (tilde) is your home directory <br> - (minus) switches to the previous directory|
-|ls <br> ls `<options>` <br> ls `<folder>` <br> ls `<pattern>` | ls <br> ls -la <br> ls -l -a (same as above) <br> ls -halt (more arguments) <br> ls -d */ (list all directories) <br> ls test (contents of subfolder) <br> ls *.txt (show only .txt files) | **List** contents of a folder <br> -h human readable <br> -a all <br> -l more information <br> -t order by time |
+|ls <br> ls `<options>` <br> ls `<folder>` <br> ls `<pattern>` | ls <br> ls -la <br> ls -l -a (same as above) <br> ls -halt (more arguments) <br> ls -d \*/ (list all directories) <br> ls test (contents of subfolder) <br> ls \*.txt (show only .txt files) | **List** contents of a folder <br> -h human readable <br> -a all <br> -l more information <br> -t order by time |
 |mkdir `<folder>` <br> mkdir -p `<path>` |mkdir test| **Make directory** <br> Creates a new immediate subfolder with the given name. <br> -p Create path. |
 |pwd | | **Print working directory** <br> Shows the current path.|
 |mv  `<source>` `<target>` | mv text.txt test <br> mv test.txt bla.txt |**Move** a file <br> Can also be used for renaming (second example)|
@@ -28,18 +26,18 @@
 |reset| | **Reset** the console. <br>Like clear but more powerful. |
 
 ## More Basics
-
 |Command|Example|Comment|
 |---|---|---|
 |head  `<file>` <br> tail `<file>` | head text.txt <br> head -n 20 text.txt | **Display first/last lines of file** <br> Default n=10.|
 |less `<file>` | less text.txt | **Display contents of a file** <br> of a file, read-only <br> <kbd>h</kbd> help <br> <kbd>q</kbd> close<br> <kbd>f</kbd>,<kbd>b</kbd> forward, backward one page <br> <kbd>e</kbd>,<kbd>y</kbd> forward, backward single line <br>/`<word>` search <br> <kbd>n</kbd>,<kbd>p</kbd> next, previous `<word>` during search <br> -i activate case insentitive search |
 |nano `<file>` | nano text.txt | **File editor** <br> <kbd>Ctrl</kbd>+<kbd>x</kbd> to close <br> <kbd>Alt</kbd>+<kbd>/</kbd> to go to the end of a file |
-|chmod <permissions> <folder>|chmod 777 test|**Change permissions** <br> for file <br> 777 gives the folder all possible rights. <br> Further explanation see below. |
+|chmod `<permissions>` `<file>` <br> chmod -R `<permissions>` `<folder>`|chmod 777 file.txt <br> chmod -R 777 my_folder|**Change permissions** <br> -R recursive <br> 777 gives the folder all possible rights. <br> Further explanation see below. |
 |chown `<username>` `<file>` | sudo chown alice folder | **Change file owner** |
 |du `<directory>` | du -h <br> du -sh . <br> du -sh *  &#124; sort -h | **Disk usage** <br> -s summary <br> -h human readable |
 |df `<directory>` | df -h | **Disk free** <br> Show remaining disk space. <br> -h human readable |
 |htop| | **Task manager** <br> View currently running processes. <kbd>Q</kbd> to close.|
-
+|sudo shutdown now <br> sudo reboot now| | **Shutdown / Reboot** |
+  
 ## Multiple Commands
 |Command<img width=110/>|Example<img width=100/>|Comment|
 |---|---|---|
@@ -47,27 +45,6 @@
 | `<cmd1>` && `<cmd2>` | | **Double ampersand** <br> Execute `<cmd2>` after `<cmd1>` but only if `<cmd1>` finished successfully. |
 | `<cmd>` > `<file>` <br> `<cmd>` >> `<file>` <br> `<cmd>` 2> `<file>`  <br> `<cmd>` &> `<file>` | ls -a > result.txt <br> ls -a >> result.txt | **Redirect** <br> the output of a command into a file <br> > creates/overwrites a file <br> >> creates/appends to a file <br> 2> redirects the errors <br> &> redirects both standard output and standard error |
 | `<cmd1>` &#124; `<cmd2>` | history  &#124; less <br> ls  &#124; less | **Pipe** <br> the output of a command to less. <br> Especially useful for history command (displays the latest commands) or folders with many files in them (last example) |
-
-## Search
-[fselect](https://github.com/jhspetersson/fselect) - Search for files in a modern, SQL-like fashion.  
-
-|Command|Example|Comment|
-|---|---|---|
-|grep|&nbsp;|&nbsp;|
-|find|&nbsp;|&nbsp;|
-
-## Screen
-|Command|Comment|
-|---|---|
-|screen | Create a new session. |
-|<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>D</kbd> | Detach from current screen session. |
-|<kbd>Ctrl</kbd>+<kbd>D</kbd> | End current session. Similar to `exit`. |
-|screen -r | Reattach to session. |
-|screen -ls | List all sessions. |
-|screen -S `<name>` -L | Create a new screen session `<name>` with logging enabled. |
-|screen -r `<name>`| Reattach to session with `<name>` if there are multiple ones. |
-|screen -rx `<name>`| Attach to session that is already attached. |
-|<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>Esc</kbd> | Enter scroll mode. Use <kbd>↑</kbd> and <kbd>↓</kbd> or <kbd>Pg Up</kbd> and <kbd>Pg Dn</kbd> to scroll. Hit <kbd>Esc</kbd> to exit scroll mode. |
 
 ## Misc
 |Command<img width=300/>|Example|Comment|
@@ -90,6 +67,67 @@
 |<kbd>Ctrl</kbd>+<kbd>W</kbd>|Delete one word left of the cursor.|
 |<kbd>Ctrl</kbd>+<kbd>U</kbd>|Delete entire line.|
 |<kbd>Ctrl</kbd>+<kbd>Y</kbd>|Paste back what you just deleted.|
+
+### Grep
+```bash
+grep
+    # Search Within Files using Regular Expressions
+    # Syntax: grep <options> <search-term> <filename>
+    #
+    # -i ignore case
+    # -n show line numbers
+    # -R recursive
+    # -I ignore binary files
+    # -l print out file names instead
+    # -P Perl syntax \d \w \s
+    # -E extended syntax [[:digit:]] [[:alpha:]] [[:space:]]
+    # {2} exactly, {1,3} from to, {2,} two or more
+    # --include=*.py search only in .py files.
+
+# Search word needle in file haystack.txt
+grep 'needle' haystack.txt
+
+# Search in .py files of current and all subdirectories, ignore case, print filenames only
+grep -Rli --include=*.py 'needle' *
+```
+[RegExr](https://regexr.com/) - Learn and build regular expressions.  
+
+### Find
+```bash
+find
+    # Find Files or Directories Based On Name 
+    # Syntax: find <location> <options>
+    #
+    # -type f=search only files, d=search only directories
+    # -name name
+    # -iname caseinsensitive name
+    
+# List all file names and directory names containing needle
+find . -name 'needle'
+
+# List only file names containing needle
+find . -type f -name 'needle'
+
+# List all files ending in .py
+find . -type f -name "*.py"
+
+# List all files ending in .py, containing needle, hide error messages
+find . -type f -name "*.py" -exec grep -li 'needle' {} +
+```
+
+
+## Screen
+|Command|Comment|
+|---|---|
+|screen | Create a new session. |
+|<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>D</kbd> | Detach from current screen session. |
+|<kbd>Ctrl</kbd>+<kbd>D</kbd> | End current session. Similar to `exit`. |
+|screen -r | Reattach to session. |
+|screen -ls | List all sessions. |
+|screen -S `<name>` -L | Create a new screen session `<name>` with logging enabled. |
+|screen -r `<name>`| Reattach to session with `<name>` if there are multiple ones. |
+|screen -rx `<name>`| Attach to session that is already attached. |
+|<kbd>Ctrl</kbd>+<kbd>A</kbd>,<kbd>Esc</kbd> | Enter scroll mode. Use <kbd>↑</kbd> and <kbd>↓</kbd> or <kbd>Pg Up</kbd> and <kbd>Pg Dn</kbd> to scroll. Hit <kbd>Esc</kbd> to exit scroll mode. |
 
 ## Creating an SSH key
 
@@ -184,6 +222,7 @@ alias R='R --no-save'
 ```
 
 ## Resources
+ * [fselect](https://github.com/jhspetersson/fselect) - Search for files in a modern, SQL-like fashion.  
  * [Modern Unix Alternatives](https://github.com/ibraheemdev/modern-unix)
  * [Presentation](https://ketancmaheshwari.github.io/pdfs/LPT_LISA.pdf)
  * [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)
