@@ -90,7 +90,7 @@ grep 'needle' haystack.txt
 # Search in .py files of current and all subdirectories, ignore case, print filenames only
 grep -Rli --include=*.py 'needle' *
 ```
-More: [Regex Intro](https://github.com/zeeshanu/learn-regex), [Ex1](http://www.robelle.com/smugbook/regexpr.html), [Ex2](http://marvin.cs.uidaho.edu/Teaching/CS445/regex.html), [RegExr](https://regexr.com/). 
+More: [Intro](https://github.com/zeeshanu/learn-regex), [Ex1](http://www.robelle.com/smugbook/regexpr.html), [Ex2](http://marvin.cs.uidaho.edu/Teaching/CS445/regex.html), [RegExr](https://regexr.com/). 
 
 ### Find
 ```bash
