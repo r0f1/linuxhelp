@@ -9,7 +9,7 @@
 |<kbd>↑</kbd>|&nbsp;|See previous command.|
 |<kbd>Ctrl</kbd>+<kbd>C</kbd>|&nbsp;|Kill the current process or command (e.g. if something hangs).|
 |<kbd>Ctrl</kbd>+<kbd>D</kbd>|&nbsp;|Logout. Closes the console if you're not in an ssh session. Similar to `exit`. |
-|<kbd>Ctrl</kbd>+<kbd>R</kbd>|&nbsp;|Search through your history. Start typing and it will auto-complete. Hit <kbd>Ctrl</kbd>+<kbd>r</kbd> again and it will cycle though the other auto-completion options. Hit <kbd>Enter</kbd> and the command will execute. Hit <kbd>←</kbd>,<kbd>→</kbd> to edit commands.|
+|<kbd>Ctrl</kbd>+<kbd>R</kbd>|&nbsp;|Search through your history. Start typing and it will auto-complete. Hit <kbd>Ctrl</kbd>+<kbd>R</kbd> again and it will cycle though the other auto-completion options. Hit <kbd>Enter</kbd> and the command will execute. Hit <kbd>←</kbd>,<kbd>→</kbd> to edit commands.|
 
 ## Basics
 |Command<img width=350/>|Example|Comment|
