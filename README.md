@@ -113,6 +113,12 @@ find . -type f -name "*.py"
 
 # List all files ending in .py, containing needle, hide error messages
 find . -type f -name "*.py" -exec grep -li 'needle' {} +
+
+# Unzip files
+find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip -qq {}
+
+# Unzip files without going into subdirectories
+find . -maxdepth 1 -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip -qq {}
 ```
 More: [Ex1](http://www.binarytides.com/linux-find-command-examples/), [Ex2](https://en.wikibooks.org/wiki/Guide_to_Unix/Commands/Finding_Files). 
 
