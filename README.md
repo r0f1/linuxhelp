@@ -114,6 +114,9 @@ find . -type f -name "*.py"
 # List all files ending in .py, containing needle, hide error messages
 find . -type f -name "*.py" -exec grep -li 'needle' {} +
 
+# Recursively count number of files in all subdirectories
+find . -type f | wc -l
+
 # Unzip files
 find . -name '*.zip' -print0 | xargs -0 -I {} -P 10 unzip -qq {}
 
