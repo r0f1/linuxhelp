@@ -19,8 +19,8 @@
 |ls <br> ls `<options>` <br> ls `<folder>` <br> ls `<pattern>` | ls <br> ls -la <br> ls -l -a (same as above) <br> ls -halt (more arguments) <br> ls -d \*/ (list all directories) <br> ls test (contents of subfolder) <br> ls \*.txt (show only .txt files) | **List** contents of a folder <br> -h human readable <br> -a all <br> -l more information <br> -t order by time |
 |mkdir `<folder>` <br> mkdir -p `<path>` |mkdir test| **Make directory** <br> Creates a new immediate subfolder with the given name. <br> -p Create path. |
 |pwd | | **Print working directory** <br> Shows the current path.|
-|mv  `<source>` `<target>` | mv text.txt test <br> mv test.txt bla.txt |**Move** a file <br> Can also be used for renaming (second example)|
-|cp `<source>` `<target>`| cp text.txt test <br> cp -p text.txt test | **Copy** a file <br> -p preserves mode, ownership, and timestamps<br> Can also rename. |
+|mv  `<source>` `<target>` | mv text.txt test <br> mv test.txt bla.txt |**Move** a file <br> Can also be used for renaming (second example). <br> [progress](https://github.com/Xfennec/progress)|
+|cp `<source>` `<target>`| cp text.txt test <br> cp -p text.txt test | **Copy** a file <br> -p preserves mode, ownership, and timestamps<br> Can also rename. <br> [progress](https://github.com/Xfennec/progress)|
 |rm `<file>` <br> rm -rf `<folder>`|rm text.txt <br> rm -rf test  <br> rm \*.tmp (removes all files with file ending \*.tmp)| **Remove** <br> *Warning: Cannot be undone!* <br> -f force, no confirmation dialog <br> -r recursive, for folders |
 |clear| | **Clear** the console. <br>Gives you a fresh view. Similar to <kbd>Ctrl</kbd>+<kbd>L</kbd>|
 |reset| | **Reset** the console. <br>Like clear but more powerful. |
